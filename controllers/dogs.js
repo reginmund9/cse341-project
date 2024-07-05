@@ -3,64 +3,64 @@ const mongodb = require('../data/database');
 
 const getSingle = async (req, res) => {
   //#swagger.tags=['dogs']
-  const catId = new ObjectId(req.params.id);
-  const result = await mongodb.getDatabase().db().collection('dogs').find({ _id: catId });
-  result.toArray().then((cats) => {
+  const dogId = new ObjectId(req.params.id);
+  const result = await mongodb.getDatabase().db().collection('dogs').find({ _id: dogId });
+  result.toArray().then((dogs) => {
     res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(cats[0]);
+    res.status(200).json(dogs[0]);
   });
 };
 
 const getAll = async (req, res) => {
   //#swagger.tags=['dogs']
   const result = await mongodb.getDatabase().db().collection('dogs').find();
-  result.toArray().then((cats) => {
+  result.toArray().then((dogs) => {
     res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(cats);
+    res.status(200).json(dogs);
   });
 };
 
-const createCat = async (req, res) => {
+const createDog = async (req, res) => {
   //#swagger.tags=['dogs']
-  const cat = {
+  const dog = {
     name: req.body.name,
     breed: req.body.breed,
     gender: req.body.gender,
     color: req.body.color
   };
-  const result = await mongodb.getDatabase().db().collection('dogs').insertOne(cat);
+  const result = await mongodb.getDatabase().db().collection('dogs').insertOne(dog);
   if (result.acknowledged) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Error occurred when creating cat.')
+    res.status(500).json(response.error || 'Error occurred when creating dog.')
   }
 };
 
-const updateCat = async (req, res) => {
+const updateDog = async (req, res) => {
   //#swagger.tags=['dogs']
-  const catId = new ObjectId(req.params.id);
-  const cat = {
+  const dogId = new ObjectId(req.params.id);
+  const dog = {
     name: req.body.name,
     breed: req.body.breed,
     gender: req.body.gender,
     color: req.body.color
   };
-  const result = await mongodb.getDatabase().db().collection('dogs').replaceOne({ _id: catId }, cat);
+  const result = await mongodb.getDatabase().db().collection('dogs').replaceOne({ _id: dogId }, dog);
   if (result.modifiedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Error occurred when creating cat.')
+    res.status(500).json(response.error || 'Error occurred when creating dog.')
   }
 };
 
-const deleteCat = async (req, res) => {
+const deleteDog = async (req, res) => {
   //#swagger.tags=['dogs']
-  const catId = new ObjectId(req.params.id);
-  const result = await mongodb.getDatabase().db().collection('dogs').deleteOne({ _id: catId });
+  const dogId = new ObjectId(req.params.id);
+  const result = await mongodb.getDatabase().db().collection('dogs').deleteOne({ _id: dogId });
   if (result.deletedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Error occurred when deleting cat.')
+    res.status(500).json(response.error || 'Error occurred when deleting dog.')
   }
 };
 
@@ -68,7 +68,7 @@ const deleteCat = async (req, res) => {
 module.exports = {
   getSingle,
   getAll,
-  createCat,
-  updateCat,
-  deleteCat
+  createDog,
+  updateDog,
+  deleteDog
 };

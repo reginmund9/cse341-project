@@ -3,26 +3,26 @@ const mongodb = require('../data/database');
 
 const getSingle = async (req, res) => {
   //#swagger.tags=['cars']
-  const motoId = new ObjectId(req.params.id);
-  const result = await mongodb.getDatabase().db().collection('cars').find({ _id: motoId });
-  result.toArray().then((motos) => {
+  const carId = new ObjectId(req.params.id);
+  const result = await mongodb.getDatabase().db().collection('cars').find({ _id: carId });
+  result.toArray().then((cars) => {
     res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(motos[0]);
+    res.status(200).json(cars[0]);
   });
 };
 
 const getAll = async (req, res) => {
   //#swagger.tags=['cars']
   const result = await mongodb.getDatabase().db().collection('cars').find();
-  result.toArray().then((motos) => {
+  result.toArray().then((cars) => {
     res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(motos);
+    res.status(200).json(cars);
   });
 };
 
-const createMoto = async (req, res) => {
+const createCar = async (req, res) => {
   //#swagger.tags=['cars']
-  const moto = {
+  const car = {
     year: req.body.year,
     make: req.body.make,
     model: req.body.model,
@@ -32,18 +32,18 @@ const createMoto = async (req, res) => {
     gearCount: req.body.gearCount,
     shifterType: req.body.shifterType
   };
-  const result = await mongodb.getDatabase().db().collection('cars').insertOne(moto);
+  const result = await mongodb.getDatabase().db().collection('cars').insertOne(car);
   if (result.acknowledged) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Error occurred when creating moto.')
+    res.status(500).json(response.error || 'Error occurred when creating car.')
   }
 };
 
-const updateMoto = async (req, res) => {
+const updateCar = async (req, res) => {
   //#swagger.tags=['cars']
-  const motoId = new ObjectId(req.params.id);
-  const moto = {
+  const carId = new ObjectId(req.params.id);
+  const car = {
     year: req.body.year,
     make: req.body.make,
     model: req.body.model,
@@ -53,22 +53,22 @@ const updateMoto = async (req, res) => {
     gearCount: req.body.gearCount,
     shifterType: req.body.shifterType
   };
-  const result = await mongodb.getDatabase().db().collection('cars').replaceOne({ _id: motoId }, moto);
+  const result = await mongodb.getDatabase().db().collection('cars').replaceOne({ _id: carId }, car);
   if (result.modifiedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Error occurred when creating moto.')
+    res.status(500).json(response.error || 'Error occurred when creating car.')
   }
 };
 
-const deleteMoto = async (req, res) => {
+const deleteCar = async (req, res) => {
   //#swagger.tags=['cars']
-  const motoId = new ObjectId(req.params.id);
-  const result = await mongodb.getDatabase().db().collection('cars').deleteOne({ _id: motoId });
+  const carId = new ObjectId(req.params.id);
+  const result = await mongodb.getDatabase().db().collection('cars').deleteOne({ _id: carId });
   if (result.deletedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Error occurred when deleting moto.')
+    res.status(500).json(response.error || 'Error occurred when deleting car.')
   }
 };
 
@@ -76,7 +76,7 @@ const deleteMoto = async (req, res) => {
 module.exports = {
   getSingle,
   getAll,
-  createMoto,
-  updateMoto,
-  deleteMoto
+  createCar,
+  updateCar,
+  deleteCar
 };

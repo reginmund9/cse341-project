@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const catsController = require('../controllers/dogs.js');
+const dogsController = require('../controllers/dogs.js');
 //const validation = require('../middleware/validate');
 const { isAuthenticated } = require('../middleware/authenticate');
 
-router.get('/:id', catsController.getSingle);
-router.get('/', catsController.getAll);
-router.post('/', isAuthenticated, catsController.createCat);
-router.put('/:id', isAuthenticated, catsController.updateCat);
-router.delete('/:id', isAuthenticated, catsController.deleteCat);
+router.get('/:id', dogsController.getSingle);
+router.get('/', dogsController.getAll);
+router.post('/', isAuthenticated, dogsController.createDog);
+router.put('/:id', isAuthenticated, dogsController.updateDog);
+router.delete('/:id', isAuthenticated, dogsController.deleteDog);
 
 module.exports = router;
