@@ -1,0 +1,24 @@
+{
+  "name": "cse341-project",
+  "version": "1.0.0",
+  "description": "My second collection",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reginmund9/cse341-project.git"
+  },
+  "author": "Ramon Vargas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reginmund9/cse341-project/issues"
+  },
+  "homepage": "https://github.com/reginmund9/cse341-project#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0"
+  }
+}
