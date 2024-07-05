@@ -1,0 +1,59 @@
+// LOCAL ### GET home GET http://localhost:3001
+
+### GET all cars GET http://localhost:3001/cars
+
+### GET specific car GET http://localhost:3001/cars/6687dbf1f451c3a549d3f3d2 ### Add car (POST) POST http://localhost:3001/cars Content-Type: application/json
+
+{
+  "year": "2022",
+  "make": "Toyota",
+  "model": "Camry",
+  "color": "Silver",
+  "engineSize": "2500cc",
+  "transmissionType": "Automatic",
+  "gearCount": "8"
+}
+### Update car (PUT) PUT http://localhost:3001/cars/6687dbf1f451c3a549d3f3d2 Content-Type: application/json
+
+{
+  "year": "2022",
+  "make": "Toyota",
+  "model": "Camry",
+  "color": "Black",
+  "engineSize": "2500cc",
+  "transmissionType": "Automatic",
+  "gearCount": "8"
+}
+
+### Delete car DELETE http://localhost:3001/cars/6687dbf1f451c3a549d3f3d2
+
+// PRODUCTION ### GET home GET https://cse341-project2-3j28.onrender.com
+
+### GET all cars GET https://cse341-project2-3j28.onrender.com/cars
+
+### GET specific car GET https://cse341-project2-3j28.onrender.com/cars/6687dbf1f451c3a549d3f3d2
+
+### Add car (POST car) POST https://cse341-project2-3j28.onrender.com/cars Content-Type: application/json
+
+{
+  "year": "2023",
+  "make": "Honda",
+  "model": "Accord",
+  "color": "Silver",
+  "engineSize": "2000cc",
+  "transmissionType": "CVT",
+  "gearCount": "7"
+}
+
+### Change car information (PUT) PUT https://cse341-project2-3j28.onrender.com/cars/6687dbf1f451c3a549d3f3d2 Content-Type: application/json
+
+{
+  "year": "2022",
+  "make": "Toyota",
+  "model": "Camry",
+  "color": "Gold",
+  "engineSize": "2500cc",
+  "transmissionType": "Automatic",
+  "gearCount": "8"
+}
+### Remove a car (DELETE) DELETE https://cse341-project2-3j28.onrender.com/cars/6687dbf1f451c3a549d3f3d2                  

@@ -1,0 +1,51 @@
+// LOCAL ### GET home GET http://localhost:3001
+
+### GET all dogs GET http://localhost:3001/dogs
+
+### GET specific cat GET http://localhost:3001/dogs/6687dde1f451c3a549d3f3d6
+
+### Add cat (POST) POST http://localhost:3001/dogs Content-Type: application/json
+
+{
+  "name": "Charlie",
+  "breed": "Poodle",
+  "gender": "Male",
+  "color": "White"
+}
+
+### Update cat (PUT) PUT http://localhost:3001/dogs/6687dde1f451c3a549d3f3d6 Content-Type: application/json
+
+{
+  "name": "Buddy",
+  "breed": "Labrador Retriever",
+  "gender": "Male",
+  "color": "Brown"
+}
+
+### Delete cat DELETE http://localhost:3001/dogs/<id>
+
+// PRODUCTION ### GET home GET https://cse341-project2-3j28.onrender.com
+
+### GET all dogs GET https://cse341-project2-3j28.onrender.com/dogs
+
+### GET specific cat GET https://cse341-project2-3j28.onrender.com/dogs/6687dde1f451c3a549d3f3d6
+
+### Add cat (POST cat) POST https://cse341-project2-3j28.onrender.com/dogs Content-Type: application/json
+
+{
+  "name": "Lucy",
+  "breed": "Ragdoll",
+  "gender": "Female",
+  "color": "Blue"
+}
+
+### Change dog information (PUT) PUT https://cse341-project2-3j28.onrender.com/cats/6687dde1f451c3a549d3f3d6 Content-Type: application/json
+
+{
+  "name": "Buddy",
+  "breed": "Labrador Retriever",
+  "gender": "Male",
+  "color": "Brown"
+}
+
+### Remove a cat (DELETE) DELETE https://cse341-project2-3j28.onrender.com/cats/<id>
