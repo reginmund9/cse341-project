@@ -29,8 +29,8 @@ const createCar = async (req, res) => {
     color: req.body.color,
     engineSize: req.body.engineSize,
     transmissionType: req.body.transmissionType,
-    gearCount: req.body.gearCount,
-    shifterType: req.body.shifterType
+    gearCount: req.body.gearCount
+    //shifterType: req.body.shifterType
   };
   const result = await mongodb.getDatabase().db().collection('cars').insertOne(car);
   if (result.acknowledged) {

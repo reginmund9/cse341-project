@@ -8,6 +8,7 @@
   "host": "cars-87nx.onrender.com",
   "basePath": "/",
   "schemes": [
+    
     "https"
   ],
   "paths": {
@@ -102,9 +103,6 @@
                 },
                 "gearCount": {
                   "example": "any"
-                },
-                "shifterType": {
-                  "example": "any"
                 }
               }
             }
@@ -188,9 +186,6 @@
                   "example": "any"
                 },
                 "gearCount": {
-                  "example": "any"
-                },
-                "shifterType": {
                   "example": "any"
                 }
               }

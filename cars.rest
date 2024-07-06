@@ -37,12 +37,12 @@
 
 {
   "year": "2023",
-  "make": "Honda",
-  "model": "Accord",
-  "color": "Silver",
+  "make": "BYD",
+  "model": "Yuan",
+  "color": "White",
   "engineSize": "2000 cc",
-  "transmissionType": "CVT",
-  "gearCount": "7"
+  "transmissionType": "Automatic",
+  "gearCount": "9"
 }
 
 ### Change car information (PUT) PUT https://cse341-project2-3j28.onrender.com/cars/6687dbf1f451c3a549d3f3d2 Content-Type: application/json

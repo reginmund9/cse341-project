@@ -30,7 +30,7 @@ const saveMoto = (req, res, next) => {
       engineSize: 'required|min:1|max:10|string',
       transmissionType: 'required|min:1|max:10|string',
       gearCount: 'required|min:1|max:5|string',
-      shifterType: 'required|min:1|max:20|string',
+      //shifterType: 'required|min:1|max:20|string',
     };
     validator(req.body, validationRule, {}, (err, status) => {
       if (!status) {
