@@ -9,7 +9,7 @@
   "make": "Toyota",
   "model": "Camry",
   "color": "Silver",
-  "engineSize": "2500cc",
+  "engineSize": "2500 cc",
   "transmissionType": "Automatic",
   "gearCount": "8"
 }
@@ -20,7 +20,7 @@
   "make": "Toyota",
   "model": "Camry",
   "color": "Black",
-  "engineSize": "2500cc",
+  "engineSize": "2500 cc",
   "transmissionType": "Automatic",
   "gearCount": "8"
 }
@@ -40,7 +40,7 @@
   "make": "Honda",
   "model": "Accord",
   "color": "Silver",
-  "engineSize": "2000cc",
+  "engineSize": "2000 cc",
   "transmissionType": "CVT",
   "gearCount": "7"
 }
@@ -52,7 +52,7 @@
   "make": "Toyota",
   "model": "Camry",
   "color": "Gold",
-  "engineSize": "2500cc",
+  "engineSize": "2500 cc",
   "transmissionType": "Automatic",
   "gearCount": "8"
 }
