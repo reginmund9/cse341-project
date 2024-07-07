@@ -1,6 +1,6 @@
 const validator = require('../helpers/validate');
 
-const saveCat = (req, res, next) => {
+const saveDog = (req, res, next) => {
   const validationRule = {
     name: 'required|min:1|max:30|string',
     breed: 'required|min:1|max:30|string',
@@ -21,7 +21,7 @@ const saveCat = (req, res, next) => {
 };
 
 
-const saveMoto = (req, res, next) => {
+const saveCar = (req, res, next) => {
     const validationRule = {
       year: ['required', 'regex:/^(19|20)[\\d]{2,2}$/'],
       make: 'required|min:1|max:20|string',
@@ -62,7 +62,7 @@ const saveMoto = (req, res, next) => {
     });
   }
 module.exports = {
-  saveCat,
-  saveMoto,
+  saveDog,
+  saveCar,
   checkMongoId
 };

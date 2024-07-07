@@ -11,8 +11,8 @@ const { isAuthenticated } = require('../middleware/authenticate');
 
 router.get('/:id',isAuthenticated, validation.checkMongoId, carsController.getSingle);
 router.get('/',isAuthenticated, carsController.getAll);
-router.post('/', isAuthenticated, validation.saveMoto, carsController.createCar);
-router.put('/:id', isAuthenticated, validation.checkMongoId, validation.saveMoto, carsController.updateCar);
+router.post('/', isAuthenticated, validation.saveCar, carsController.createCar);
+router.put('/:id', isAuthenticated, validation.checkMongoId, validation.saveCar, carsController.updateCar);
 router.delete('/:id', isAuthenticated, validation.checkMongoId, carsController.deleteCar);
 
 module.exports = router;
