@@ -51,7 +51,7 @@ const updateCar = async (req, res) => {
     engineSize: req.body.engineSize,
     transmissionType: req.body.transmissionType,
     gearCount: req.body.gearCount,
-    shifterType: req.body.shifterType
+    //shifterType: req.body.shifterType
   };
   const result = await mongodb.getDatabase().db().collection('cars').replaceOne({ _id: carId }, car);
   if (result.modifiedCount > 0) {
