@@ -24,13 +24,13 @@
 
 ### Delete cat DELETE http://localhost:3001/dogs/<id>
 
-// PRODUCTION ### GET home GET https://cse341-project2-3j28.onrender.com
+// PRODUCTION ### GET home GET https://cars-87nx.onrender.com
 
-### GET all dogs GET https://cse341-project2-3j28.onrender.com/dogs
+### GET all dogs GET https://cars-87nx.onrender.com/dogs
 
-### GET specific cat GET https://cse341-project2-3j28.onrender.com/dogs/6687dde1f451c3a549d3f3d6
+### GET specific cat GET https://cars-87nx.onrender.com/dogs/6687dde1f451c3a549d3f3d6
 
-### Add cat (POST cat) POST https://cse341-project2-3j28.onrender.com/dogs Content-Type: application/json
+### Add cat (POST cat) POST https://cars-87nx.onrender.com/dogs Content-Type: application/json
 
 {
   "name": "Lucy",
@@ -39,7 +39,7 @@
   "color": "Blue"
 }
 
-### Change dog information (PUT) PUT https://cse341-project2-3j28.onrender.com/cats/6687dde1f451c3a549d3f3d6 Content-Type: application/json
+### Change dog information (PUT) PUT https://cars-87nx.onrender.com/dogs/6687dde1f451c3a549d3f3d6 Content-Type: application/json
 
 {
   "name": "Buddy",
@@ -48,4 +48,4 @@
   "color": "Brown"
 }
 
-### Remove a cat (DELETE) DELETE https://cse341-project2-3j28.onrender.com/cats/<id>
+### Remove a cat (DELETE) DELETE https://cars-87nx.onrender.com/dogs/<id>

@@ -27,13 +27,13 @@
 
 ### Delete car DELETE http://localhost:3001/cars/6687dbf1f451c3a549d3f3d2
 
-// PRODUCTION ### GET home GET https://cse341-project2-3j28.onrender.com
+// PRODUCTION ### GET home GET https://cars-87nx.onrender.com
 
-### GET all cars GET https://cse341-project2-3j28.onrender.com/cars
+### GET all cars GET hhttps://cars-87nx.onrender.com/cars
 
-### GET specific car GET https://cse341-project2-3j28.onrender.com/cars/6687dbf1f451c3a549d3f3d2
+### GET specific car GET https://cars-87nx.onrender.com/cars/6687dbf1f451c3a549d3f3d2
 
-### Add car (POST car) POST https://cse341-project2-3j28.onrender.com/cars Content-Type: application/json
+### Add car (POST car) POST https://cars-87nx.onrender.com/cars Content-Type: application/json
 
 {
   "year": "2023",
@@ -45,7 +45,7 @@
   "gearCount": "9"
 }
 
-### Change car information (PUT) PUT https://cse341-project2-3j28.onrender.com/cars/6687dbf1f451c3a549d3f3d2 Content-Type: application/json
+### Change car information (PUT) PUT https://cars-87nx.onrender.com/cars/6687dbf1f451c3a549d3f3d2 Content-Type: application/json
 
 {
   "year": "2022",
@@ -56,4 +56,4 @@
   "transmissionType": "Automatic",
   "gearCount": "8"
 }
-### Remove a car (DELETE) DELETE https://cse341-project2-3j28.onrender.com/cars/6687dbf1f451c3a549d3f3d2                  
+### Remove a car (DELETE) DELETE https://cars-87nx.onrender.com/cars/6687dbf1f451c3a549d3f3d2                  
