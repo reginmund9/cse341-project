@@ -2,7 +2,7 @@ const validator = require('../helpers/validate');
 
 const saveDog = (req, res, next) => {
   const validationRule = {
-    name: 'required|min:1|max:30|string',
+    name: ['required', 'alpha:/^[a-zA-Z]+$/'],
     breed: 'required|min:1|max:30|string',
     gender: 'required|min:1|max:10|string',
     color: 'required|min:1|max:20|string'
